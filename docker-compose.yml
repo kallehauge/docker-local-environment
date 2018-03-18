@@ -2,8 +2,8 @@ version: '2'
 services:
   proxy:
     image: traefik
-    command: --web --api --docker --docker.domain=docker.localhost --logLevel=DEBUG
-    restart: unless-stopped
+    command: --web --api --docker --logLevel=DEBUG
+    restart: always
     networks:
       - webgateway
     ports:
