@@ -33,13 +33,6 @@ services:
     labels:
       - 'traefik.docker.network=traefik_webgateway'
 
-  portainer:
-    networks:
-      - default
-      - web
-    labels:
-      - 'traefik.docker.network=traefik_webgateway'
-
   pma:
     image: phpmyadmin/phpmyadmin
     environment:
